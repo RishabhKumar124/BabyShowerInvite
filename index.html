@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harry Potter Party Invite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: white url("https://www.transparenttextures.com/patterns/stardust.png");
+      color: black;
+      font-family: 'Harry Potter', 'HK Grotesk', sans-serif;
+      text-align: center;
+    }
+    
+    .fly-gif {
+      position: absolute;
+      top: 50px;
+      left: -200px;
+      height: 150px;
+      animation: flyAcross 10s linear infinite;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    
+    .fly-gif-2 {
+      position: absolute;
+      top: 460px;
+      right: -200px;
+      height: 40px;
+      animation: flyAcrossRight 10s linear infinite;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .fly-gif-3 {
+      position: absolute;
+      top: 140px;
+      right: 0px;
+      height: 100px;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .fly-gif-4 {
+      position: absolute;
+      top: 170px;
+      left: 0px;
+      height: 100px;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .fly-gif-6 {
+      position: absolute;
+      top: 490px;
+      left: 40px;
+      height: 80px;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .fly-gif-5 {
+      position: absolute;
+      top: 470px;
+      right: 20px;
+      height: 80px;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .fly-gif-7 {
+      position: absolute;
+      top: 610px;
+      right: 190px;
+      height: 100px;
+      z-index: 1000;
+      pointer-events: none;
+    }
+/*     .fly-gif-big {
+      position: absolute;
+      top: 150px;
+      right: 140px;
+      height: 160px;
+      z-index: 1000;
+      pointer-events: none;
+    } */
+    
+    .gif-wrapper {
+  animation: hideGif 9s forwards; /* Adjust based on GIF duration */
+}
+
+@keyframes hideGif {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+    @keyframes flyAcross {
+      0%   { left: -200px; opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { left: 110vw; opacity: 0; }
+    }
+    
+    @keyframes flyAcrossRight {
+      0%   { right: -200px; opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { right: 110vw; opacity: 0; }
+    }
+    
+    .candle-gif {
+      height: 100px;
+      width: auto;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      margin-top: 1rem;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .icon {
+      position: absolute;
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+      animation: float 20s linear infinite;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(50vw);
+        opacity: 0;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .zoom-in {
+      animation: zoomIn 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem 1rem 1rem 1rem;  /* reduce bottom padding */
+      box-sizing: border-box;
+}
+    
+    .bottom-details {
+      position: relative;
+      background: rgba(0, 0, 0, 0);
+      color: black;
+      text-align: center;
+      padding: 1rem;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-top: 3rem;
+      z-index: 10;
+    }
+    
+.bottom-details .fly-gif-big {
+  position: absolute;
+  top: 40%;         /* center vertically */
+  left: 45%;        /* center horizontally */
+  transform: translate(-50%, -50%);
+  height: 300px;
+  z-index: 9999;      /* put it behind the text */
+  pointer-events: none;
+  opacity: 1;
+  animation: vanish 6.0s forwards;
+}
+    
+    @keyframes vanish {
+  0%   { opacity: 1; visibility: visible; }
+  99%  { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+    .bottom-details p {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-family: "Tahoma", sans-serif;
+    }
+    
+  .baby-registry-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.baby-registry-gif {
+  height: 80px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.baby-registry-gif:hover {
+  transform: scale(1.1);
+}
+
+.footer-text {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+  <div class="content zoom-in">
+    <h1 class="fade-in">
+      Thank you for RSVPing 
+    </h1>
+  </div>
+  <div class="bottom-details">
+  <p>Location: <a href="https://maps.app.goo.gl/cE2pfXbhhtwxsdMm7" target="_blank" style="color: blue">
+    Nautilus Pier 4 <img src="https://cdn.glitch.global/0167ef4b-1139-49b5-aedb-3abfb3f92b3c/16-10-43-442_512.webp?v=1751283867446" alt="" style="height: 75px; vertical-align: middle;" /></a></p>
+  <p>Date: <strong>July 13th (Sunday)</strong></p>
+  <p>Time: <strong>12 PM to 3 PM</strong></p>
+    <img 
+      id="flyGif"
+      class="fly-gif-big"
+      alt="CrackBig" />
+    <script>
+  const gif = document.getElementById("flyGif");
+  const timestamp = Date.now(); // Ensures it's always fresh
+  gif.src = "https://cdn.glitch.global/0167ef4b-1139-49b5-aedb-3abfb3f92b3c/source%20(1).gif?v=" + timestamp;
+</script>
+</div>
+    <div class="baby-footer" style="text-align: center; margin-top: 3rem; font-family: Comic Neue, sans-serif;">
+  
+  <p class="footer-text" style="text-align: center; margin-top: 3rem; font-family: Comic Neue, sans-serif;">Love,<br/> Sneha & Rishabh</p>
+      <p>
+    <a href="https://www.amazon.com/baby-reg/sneha-suman-august-2025-watertown/3LGDWIA7MH5IZ" target="_blank" style="font-size: 1.2rem; font-weight: bold; color: #0077cc;">
+      🎁 View Our Baby Registry
+    </a>
+  </p>
+</div>
+      </div>
+  <img 
+    src="https://cdn.glitch.global/63768d95-7e84-49fd-86a7-1757200ff7ca/e5e401e35d609e217c19a24204360b8d.gif?v=1750705785697"
+    class="fly-gif"
+    alt="Flying Harry Potter" />
+<!--   <img 
+    src="https://cdn.glitch.global/0167ef4b-1139-49b5-aedb-3abfb3f92b3c/source.gif?v=1751198608039"
+    class="fly-gif-6"
+    alt="Crack1" />
+  <img 
+    src="https://cdn.glitch.global/0167ef4b-1139-49b5-aedb-3abfb3f92b3c/K9s.gif?v=1751198584796"
+    class="fly-gif-3"
+    alt="Crack2" />
+  <img 
+    src="https://cdn.glitch.global/0167ef4b-1139-49b5-aedb-3abfb3f92b3c/fe3b41ff75f4e1e73d48ae338fbc80b2.gif?v=1751198578160"
+    class="fly-gif-4"
+    alt="Crack3" />
+  <img 
+    src="https://cdn.glitch.global/0167ef4b-1139-49b5-aedb-3abfb3f92b3c/b1c9c23974d7ecd60d3ec15ac91b115e.gif?v=1751198553746"
+    class="fly-gif-5"
+    alt="Crack4" />
+  <img 
+    src="https://cdn.glitch.global/0167ef4b-1139-49b5-aedb-3abfb3f92b3c/4ccf558ed29356e6f8670949b7b31cad.gif?v=1751198530661"
+    class="fly-gif-7"
+    alt="Crack5" /> -->
+
+<!--   <!-- Flying Hogwarts House Logos -->
+<!--   <img src="https://cdn.glitch.global/63768d95-7e84-49fd-86a7-1757200ff7ca/Gryffindor-Logo.png?v=1750704231681" class="icon" style="left:10%; animation-delay: 0s;" />
+  <img src="https://cdn.glitch.global/63768d95-7e84-49fd-86a7-1757200ff7ca/Hufflepuff-Logo.png?v=1750704238454" class="icon" style="left:30%; animation-delay: 4s;" />
+  <img src="https://cdn.glitch.global/63768d95-7e84-49fd-86a7-1757200ff7ca/Ravenclaw-Logo.png?v=1750704247478" class="icon" style="left:50%; animation-delay: 2s;" />
+  <img src="https://cdn.glitch.global/63768d95-7e84-49fd-86a7-1757200ff7ca/Slytherin-Logo.png?v=1750704255847" class="icon" style="left:70%; animation-delay: 6s;" />  -->
+</body>
+</html>
