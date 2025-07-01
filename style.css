@@ -111,9 +111,13 @@ a:not(.btn--remix):visited {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  justify-content: space-evenly; /* or space-around / center */
+  align-items: center;
   width: 100%;
+  height: 100vh; /* Fill the entire screen */
+  overflow: hidden; /* Prevent scroll */
+  padding: 1rem;
+  box-sizing: border-box;
 }
 /******************************************************************************
 END Glitch hello-app default styles
